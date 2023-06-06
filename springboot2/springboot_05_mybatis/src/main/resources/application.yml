@@ -1,4 +1,4 @@
-#2. ??????
+#2. 配置相关信息
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
