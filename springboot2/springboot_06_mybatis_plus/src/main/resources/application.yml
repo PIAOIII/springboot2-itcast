@@ -1,0 +1,15 @@
+#2. 配置相关信息
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot2-itcast
+    username: root
+    password: 1112
+
+
+# 设置 mybatis-plus 相关配置
+# 解决 Table 'springboot2-itcast.book' doesn't exist 问题
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_

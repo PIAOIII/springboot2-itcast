@@ -1,0 +1,18 @@
+#2. 配置相关信息
+# 第一种配置方法
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/springboot2-itcast
+#    username: root
+#    password: 1112
+#    type: com.alibaba.druid.pool.DruidDataSource
+
+# 第二种配置方法
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/springboot2-itcast
+      username: root
+      password: 1112
