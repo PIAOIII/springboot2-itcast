@@ -1,5 +1,7 @@
 package com.xy.service.impl;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xy.dao.BookDao;
 import com.xy.domain.Book;
@@ -26,5 +28,12 @@ public class IBookServiceImpl extends ServiceImpl<BookDao, Book> implements IBoo
     @Override
     public boolean delete(Integer id) {
         return bookDao.deleteById(id) > 0;
+    }
+
+    @Override
+    public IPage<Book> getPage(int currentPage, int pageSize) {
+        IPage page = new Page(currentPage, pageSize);
+        bookDao.selectPage(page, null);
+        return page;
     }
 }
